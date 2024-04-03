@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ZOOM="15"
+ROW="12061"
+COL="16388"
+
+APIKEY="ign_scan_ws"
+URL="https://data.geopf.fr/private/wmts?apikey=$APIKEY&LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR&FORMAT=image/jpeg&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&STYLE=normal&TILEMATRIXSET=PM&TILEMATRIX=$ZOOM&TILEROW=$ROW&TILECOL=$COL"
+
+wget "$URL" -O "tile.jpg"
+

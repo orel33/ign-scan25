@@ -1,0 +1,12 @@
+#!/bin/bash
+
+ZOOM="15"
+ROW="12061"
+COL="16388"
+
+APIKEY="c19uzdyrb5yttrgmhr2mmyij"
+URL="https://wxs.ign.fr/$APIKEY/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&STYLE=normal&TILEMATRIXSET=PM&TILEMATRIX=$ZOOM&TILEROW=$ROW&TILECOL=$COL&FORMAT=image/jpeg"
+wget "$URL" -O "tile.jpg"
+
+
+
