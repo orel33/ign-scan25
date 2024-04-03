@@ -10,7 +10,7 @@ ignoreError = "True";
 
 key = "c19uzdyrb5yttrgmhr2mmyij";
 referer = "http://www.grimperoots.fr";
-layer="GEOGRAPHICALGRIDSYSTEMS.MAPS";  // IGN TOP25
+layer="GEOGRAPHICALGRIDSYSTEMS.MAPS";
 
 String getTileUrl( int zoom, int x, int y ) {
   return "https://wxs.ign.fr/"+key+"/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER="+layer+"&STYLE=normal&TILEMATRIXSET=PM&TILEMATRIX="+zoom+"&TILEROW="+y+"&TILECOL="+x+"&FORMAT=image/jpeg";

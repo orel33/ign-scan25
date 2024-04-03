@@ -9,7 +9,7 @@ backgroundColor = "#ffffff";
 ignoreError = "True";
 
 key = "ign_scan_ws";
-referer = "http://www.grimperoots.fr"; // => CHANGE IT
+referer = "http://www.grimperoots.fr";
 layer="GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR";
 
 String getTileUrl( int zoom, int x, int y ) {

@@ -13,6 +13,11 @@ Vous pouvez comparer la requête pour l'ancien portail (GeoPortail) et le nouvea
 * nouveau portail : [gettile-geopf.sh](gettile-geopf.sh) (mars 2024)
 * ancien portail : [gettile-geoportail.sh](gettile-geoportail.sh)
 
+**Nota Bene:** Le portail IGN est en cours de migration. Le site du *geoportail*
+sera bientôt supprimé et définitivement remplacé par *geopf*, qui utilise
+actuellement une clé temporaire commune à tout le monde ! Il faudra remplacer
+cette clé par sa propre clé dès que le nouveau service web sera complètement
+opérationnel.
 
 ## Installation de MOBAC
 
