@@ -24,13 +24,15 @@ opérationnel.
 Sous Linux Debian/Ubuntu:
 
 ```bash
-$ sudo apt install mobile-atlas-creator
+$ sudo apt install mobile-atlas-creator # version 2.1.4
 $ mobile-atlas-creator &
 ```
-Attention à la version du JRE de Java installée sur votre OS. Pour MOBAC 2.1.4,
-j'ai dû installer `openjdk 11.0.22 (2024-01-16)`.
 
-## Ajout des Cartes IGN dans MOBAC
+Attention à la version du JRE de Java installée sur votre OS. Pour MOBAC
+`2.1.4`, j'ai dû installer Java `openjdk 11`. Si besoin, vous pouvez trouver la
+dernière version sur <https://sourceforge.net/projects/mobac/>.
+
+## Import des Cartes IGN dans MOBAC
 
 Voici le fichier *Map Source* au format BSH nécessaire pour charger la carte IGN
 depuis le portail web (flux WMTS) :
@@ -42,6 +44,22 @@ Ajoutez le fichier BSH dans `~/.config/mobac/mapsources/`. Puis sélectionnez
 dans *Map Source* la carte souhaitée.
 
 ![](mobac.jpg)
+
+## Génération d'une Carte *offline* avec MOBAC
+
+En pratique, j'utilise l'application *LocusMap* sous Android pour consulter les
+cartes IGN *offline*, ce qui est particulièrement utile si on n'a pas de réseau
+GSM en montagne !
+
+Pour générer cette carte, il faut créer dans MOBAC un nouvel Atlas au format
+(RMAPS sqlite, extension `.sqlitedb`) avec les niveaux de zoom 11/13/15,
+correspondant respectivement aux échelles 1:100000/1:50000/1:25000... J'effectue
+ensuite dans MOBAC une sélection de la zone d'intérêt, ici les Pyrénées !
+
+![](mobac-pyrenees.png)
+
+Puis, je lance la création de la carte, ce qui peut prendre un temps plus ou
+moins long (environ 1h dans ce cas précis).
 
 ## Annexes
 
